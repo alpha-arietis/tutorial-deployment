@@ -39,8 +39,12 @@ connection.once('open', () => {
 // // end
 
 // *** REQUIRE ROUTE FILES AND USE THEM ***
-const vehiclesRouter = require('./routes/vehicles')
-app.use('/vehicles', vehiclesRouter)
+//const vehiclesRouter = require('./routes/vehicles')
+//app.use('/vehicles', vehiclesRouter)
+
+app.get('/vehicles', (req, res) => {
+    res.send('vehicles list goes here...')
+  })
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`) // tells server to listen on a certain port
