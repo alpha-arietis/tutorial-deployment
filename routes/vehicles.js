@@ -2,7 +2,7 @@ const router = require('express').Router()
 let Vehicle = require('../models/vehicle.model')
 
 router.route('/').get((req, res) => {
-    res.send('TEST: vehicles list goes here...')
+    //res.send('TEST: vehicles list goes here...')
     Vehicle.find()
     .then(vehicles => res.json(vehicles))
     .catch(err => res.status(400).json('Error: ' + err))
